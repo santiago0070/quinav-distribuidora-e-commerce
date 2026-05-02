@@ -1,51 +1,25 @@
-📊 Análise de Performance Logística e E-commerce: Quinav-Distribuidora
-1. Contextualização e Business Case (Etapa 1)
-A Quinav-Distribuidora expandiu suas operações para o canal digital e precisava validar se a infraestrutura logística estava acompanhando o crescimento das vendas.
+Data Intelligence & Supply Chain Analysis: Caso Quinav-Distribuidora
+1. Business Case e Contextualização (Etapa 1)
+A Quinav-Distribuidora, atuante no setor de suprimentos e e-commerce, enfrentava o desafio de escalar suas operações mantendo a saúde financeira e a satisfação do cliente.
 
-O Problema: A empresa identificou que, embora o faturamento fosse alto, havia uma percepção de queda na satisfação do cliente relacionada ao tempo de entrega.
+O Problema de Negócio: Necessidade de identificar a correlação entre o tempo de entrega e a taxa de cancelamento, além de otimizar a margem de contribuição por categoria.  
 
-Propósito: Analisar o faturamento por categoria e região, identificando como gargalos logísticos impactam diretamente o CX (Customer Experience).
+Objetivo: Implementar um pipeline de dados para monitorar o faturamento real (líquido de descontos e fretes) e a eficiência logística regional.  
 
-2. Engenharia e Preparação de Dados (Etapa 2)
-Utilizando o arquivo quinav_ecommerce_data_5.csv com 3.000 registros, apliquei técnicas avançadas de manipulação de dados com Python (Pandas e NumPy):
+2. Engenharia de Dados e Business Rules (Etapa 2)
+O projeto processou uma volumetria de 3.000 registros operacionais, onde apliquei:
 
-Tratamento de Dados: Limpeza de inconsistências e normalização de formatos de data e moeda.  
+Tratamento de Dados (Python/Pandas): Limpeza de registros inconsistentes e padronização de tipos de dados para garantir a integridade da análise.  
 
-Regras de Negócio Customizadas:
+Desenvolvimento de KPIs:
 
-Criação de indicadores de Faturamento Final considerando Valor Bruto, Frete e Descontos (cupons).  
+Ticket Médio Real: Calculado após a aplicação de cupons de desconto e custos de frete.  
 
-Simulação de Impacto Logístico: Implementação de lógica condicional para penalizar a avaliação do cliente em pedidos com atraso, permitindo uma análise de correlação entre tempo de entrega e satisfação.  
+SLA Logístico: Categorização de pedidos entre "No Prazo" e "Atrasado" para medir o impacto na avaliação do usuário.  
 
-3. Business Intelligence e Visualização (Etapa 3)
-A análise foi dividida em camadas para atender diferentes níveis de decisão:
+3. Business Intelligence e Arquitetura de Visualização (Etapa 3)
+A solução de visualização foi estruturada em uma hierarquia de decisão:
 
-Nível Executivo (Faturamento):
+View Executiva: Faturamento total de R$ 5,77M, com foco na performance das categorias "Comida" e "Equipamento Industrial".  
 
-Faturamento Total: R$ 5,77M.  
-
-Categoria Líder: Comida (R$ 1,00M), seguida por Limpeza.  
-
-Região Estratégica: O Sudeste representa a maior fatia de receita (R$ 1,46M).  
-
-Nível Tático (Operação e Logística):
-
-Status de Distribuição: Identificação de que a maioria dos pedidos é entregue, mas há um volume relevante de 908 pedidos com atraso.  
-
-Taxa de Cancelamento: Estagnada em 9.5%, um KPI crítico para a saúde financeira do e-commerce.  
-
-4. Documentação e Portfólio (Etapa 4)
-Este repositório está organizado para garantir a reprodutibilidade do estudo:
-
-/notebooks: Contém o script Python com todo o processo de ETL e geração de gráficos.  
-
-/output: Imagens dos insights gerados (Receita por Categoria, Satisfação vs. Entrega, etc.).  
-
-/data: Base de dados utilizada no projeto.
-
-5. Principais Insights (Etapa 5)
-Prioridade Logística no Sudeste: Como a região concentra a maior receita, qualquer redução no tempo de entrega impactará positivamente a maior parte do faturamento.  
-
-Relação Satisfação vs. Entrega: A análise comprovou que a avaliação média de 4.2/5 é sensível a atrasos, sugerindo que a eficiência logística é o principal driver de fidelização.  
-
-Mix de Produtos: O setor de Equipamento Industrial e Comida são os motores de receita, devendo ter prioridade em estoque e campanhas de marketing.
+View Operacional: Análise de 908 pedidos com atraso, permitindo identificar que o Sudeste, apesar de ser o maior faturamento (R$ 1,46M), exige atenção na malha logística para evitar churn.
