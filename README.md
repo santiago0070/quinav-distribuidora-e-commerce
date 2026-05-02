@@ -1,25 +1,37 @@
-Data Intelligence & Supply Chain Analysis: Caso Quinav-Distribuidora
-1. Business Case e Contextualização (Etapa 1)
-A Quinav-Distribuidora, atuante no setor de suprimentos e e-commerce, enfrentava o desafio de escalar suas operações mantendo a saúde financeira e a satisfação do cliente.
+🚀 Framework de Desenvolvimento: Data Intelligence & Business Case
+Sempre que eu enviar arquivos de um novo projeto, siga estas 5 Etapas para documentar o repositório no GitHub e estruturar a comunicação no LinkedIn. Use os ícones abaixo para destacar o valor de negócio e o rigor técnico.
 
-O Problema de Negócio: Necessidade de identificar a correlação entre o tempo de entrega e a taxa de cancelamento, além de otimizar a margem de contribuição por categoria.  
+🎯 Etapa 1: Contextualização e Business Case
+🏢 Universo da Organização: Definir o setor e o nome da empresa para ancorar os dados em um cenário real.
 
-Objetivo: Implementar um pipeline de dados para monitorar o faturamento real (líquido de descontos e fretes) e a eficiência logística regional.  
+🎨 Branding e UI Design: Estabelecer a identidade visual (paleta de cores e tipografia) para garantir profissionalismo.
 
-2. Engenharia de Dados e Business Rules (Etapa 2)
-O projeto processou uma volumetria de 3.000 registros operacionais, onde apliquei:
+💡 Propósito Analítico: Diagnosticar a "dor" de negócio (ex: otimização de margem, redução de churn ou eficiência de supply chain).
 
-Tratamento de Dados (Python/Pandas): Limpeza de registros inconsistentes e padronização de tipos de dados para garantir a integridade da análise.  
+⚙️ Etapa 2: Engenharia e Preparação de Dados (ETL)
+🛠️ Data Cleaning & Wrangling: Processamento de dados brutos utilizando Python/Pandas para garantir integridade e padronização.
 
-Desenvolvimento de KPIs:
+⚖️ Business Rules: Implementação de lógicas complexas e condicionais para transformar dados em inteligência operacional.
 
-Ticket Médio Real: Calculado após a aplicação de cupons de desconto e custos de frete.  
+📦 Pipeline de Performance: Estruturação e exportação da base otimizada para ferramentas de BI.
 
-SLA Logístico: Categorização de pedidos entre "No Prazo" e "Atrasado" para medir o impacto na avaliação do usuário.  
+📊 Etapa 3: Business Intelligence e Visualização
+📐 Arquitetura de Dados: Modelagem dimensional (Star Schema) e desenvolvimento de cálculos avançados para análises dinâmicas.
 
-3. Business Intelligence e Arquitetura de Visualização (Etapa 3)
-A solução de visualização foi estruturada em uma hierarquia de decisão:
+📑 Hierarquia de Decisão:
 
-View Executiva: Faturamento total de R$ 5,77M, com foco na performance das categorias "Comida" e "Equipamento Industrial".  
+🔭 View Executiva: Insights macro e indicadores críticos (KPIs) para a diretoria.
 
-View Operacional: Análise de 908 pedidos com atraso, permitindo identificar que o Sudeste, apesar de ser o maior faturamento (R$ 1,46M), exige atenção na malha logística para evitar churn.
+🔍 View Tática/Operacional: Granularidade técnica para identificação de causas raiz.
+
+🖥️ User Experience (UX): Interface intuitiva focada na usabilidade e fluidez da análise.
+
+📁 Etapa 4: Documentação e Portfólio (GitHub)
+🗂️ Estrutura de Repositório: Organização modular dos arquivos para reprodutibilidade técnica.
+
+📝 Technical Writing (README): Documentação detalhando o "Como" e o "Porquê" das decisões de projeto, com foco em insights acionáveis.
+
+📢 Etapa 5: Comunicação e Autoridade (LinkedIn)
+💰 ROI & Business Impact: Tradução de métricas técnicas em ganhos financeiros ou operacionais para o negócio.
+
+📖 Storytelling Estratégico: Narrativa profissional que conecta o problema inicial à solução entregue, gerando valor para a rede.
