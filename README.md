@@ -1,66 +1,49 @@
-🚀 [Nome do Projeto]: Inteligência de Dados aplicada ao [Setor/Problema]
-📌 1. Contextualização e Business Case (Etapa 1)
-Organização: [Nome da Empresa] | Setor: [Ex: Varejo / Logística]
+📊 E-commerce Analytics: Quinav Distribuidora
 
-Nesta etapa, o foco foi ancorar os dados em um cenário de negócio real. O projeto aborda a seguinte problemática:
+🟢 Contextualização & Storytelling
+A Quinav Distribuidora recentemente expandiu suas operações para o canal digital. Este projeto visa diagnosticar a performance deste novo braço de faturamento, identificando gargalos logísticos e oportunidades de crescimento em vendas e fidelização.
 
-A Dor do Negócio: [Descreva o problema, ex: Queda na margem de lucro devido a devoluções excessivas].
+Paleta de Cores Sugerida: Azul Petróleo (Confiança), Verde Esmeralda (Crescimento/Receita) e Cinza Soft (Neutralidade Técnica).
 
-Propósito: Desenvolver uma solução de Business Intelligence que identifique gargalos operacionais e forneça previsibilidade para a tomada de decisão executiva.
+Business Case: Baixa visibilidade sobre o impacto do tempo de entrega na satisfação do cliente e necessidade de identificar as categorias de produto que sustentam a margem operacional.
 
-Identidade Visual: O dashboard foi construído utilizando uma paleta de cores institucional para garantir sobriedade e foco nos indicadores críticos.
+🔵 Engenharia de Dados (ETL & Coding)
+O pipeline de dados foi desenvolvido em Python utilizando o arquivo quinav_ecommerce_data.csv como fonte principal.  
 
-⚙️ 2. Engenharia e Preparação de Dados (Etapa 2)
-A confiabilidade dos insights começa na base. Utilizei Python para garantir um processo de ETL (Extração, Transformação e Carga) robusto:
+Tratamento Técnico:
 
-Data Cleaning: Tratamento de valores nulos, remoção de duplicatas e normalização de strings.
+Limpeza e normalização de strings (Categorias e Status).
 
-Regras de Negócio: Criação de colunas calculadas e flags condicionais para categorizar [Ex: Pedidos Críticos, Clientes VIP].
+Tratamento de valores ausentes (NAs) em avaliações para pedidos não entregues.  
 
-Otimização: A base foi estruturada para suportar consultas rápidas, garantindo alta performance na ferramenta de visualização.
+Geração de massa de dados sintética com Numpy para simulação de cenários reais.  
 
-📊 3. Business Intelligence e Visualização (Etapa 3)
-A arquitetura da solução foi dividida para atender diferentes níveis de gestão:
+KPIs & Regras de Negócio:
 
-Modelagem: Estruturação em [Ex: Star Schema] para garantir a integridade referencial.
+Valor Final: Cálculo considerando (Preço Unitário * Quantidade) - Desconto + Frete.  
 
-Hierarquia de Informação:
+Penalização de Satisfação: Lógica personalizada que reduz a nota do cliente com base no atraso e tempo total de entrega.  
 
-🔭 View Executiva: Indicadores macro como Receita Total, Margem e Crescimento MoM.
+Performance: Exportação otimizada para .csv, pronta para consumo em ferramentas de BI (Power BI/Tableau).
 
-🔍 View Tática/Operacional: Detalhamento por categoria, região e vendedor para identificação de causas-raiz.
+🟡 Business Intelligence (Insights)
+A modelagem segue o esquema Star Schema (Fato/Dimensão) para garantir performance em cálculos DAX complexos.
 
-UX/UI Design: Interface intuitiva com navegação fluida, permitindo que o usuário encontre a resposta em poucos cliques.
+Hierarquia de Telas:
+Dashboard Executivo: Visão macro de Faturamento Total (R$ 5.77M), Ticket Médio (R$ 1,923.38) e Taxa de Cancelamento (9.5%).  
 
-📁 4. Estrutura do Repositório (Etapa 4)
-Para facilitar a reprodutibilidade e revisão técnica, o projeto está organizado da seguinte forma:
+Visão Operacional: Análise detalhada de logística (Avaliação vs. Tempo de Entrega) e performance regional.
 
-data/: Datasets (Brutos e Processados).
+Métrica	Valor	Insight de Negócio
+Faturamento Total	R$ 5,770,153.06	
+Alta capilaridade no primeiro ano.  
 
-scripts/: Código Python utilizado no tratamento dos dados.
+Ticket Médio	R$ 1,923.38	
+Foco em produtos de alto valor agregado.  
 
-dashboard/: Arquivo original da ferramenta de BI ou capturas de tela.
+Taxa de Cancelamento	9.5%	
+Ponto de atenção para a experiência de checkout/frete.  
 
-docs/: Documentação adicional sobre as métricas calculadas.
+Avaliação Média	4.2/5	
+Nível de serviço saudável, mas com espaço para otimização.
 
-💡 5. Insights de Negócio e Impacto (Etapa 5)
-Após a análise profunda dos dados, os principais achados foram:
-
-Insight 01: [Ex: 15% das vendas concentram 80% do lucro].
-
-Insight 02: [Ex: O tempo médio de entrega impacta em 20% na taxa de recompra].
-
-Conclusão: A implementação desta solução permite uma redução estimada de [X]% em custos operacionais através da automação do monitoramento de KPIs.
-
-🛠️ Competências Aplicadas
-Análise Exploratória de Dados (EDA)
-
-Business Storytelling
-
-Arquitetura de Dados (Fato e Dimensão)
-
-Cálculos Avançados (DAX / Python)
-
-Desenvolvido por: [Seu Nome - Rodrigo Santiago]
-
-Conecte-se comigo: [Seu Link do LinkedIn]
